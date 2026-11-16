@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="用操作範例與小練習複習堆疊、佇列和中序轉後序。">
+  <title>資料結構筆記</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/demo.js" defer></script>
+</head>
+<body>
+  <header><div class="wrap">
+    <a class="brand" href="index.html"><span class="mark" aria-hidden="true">DS</span> 資料結構筆記</a>
+    <nav aria-label="主導覽"><a href="#lessons">課程目錄</a></nav>
+  </div></header>
+
+  <main class="wrap">
+    <section class="hero" aria-labelledby="page-title">
+      <div>
+        <p class="kicker" lang="en">DATA STRUCTURES</p>
+        <h1 id="page-title">資料結構筆記</h1>
+        <p>從堆疊和佇列開始。用逐步操作看懂資料的存取順序，再用小練習檢查自己會不會。</p>
+        <a class="primary" href="#lessons">前往課程目錄 <span aria-hidden="true">↓</span></a>
+      </div>
+      <section class="demo" data-demo aria-labelledby="demo-title">
+        <div class="demo-heading">
+          <span id="demo-title">中序轉後序示範</span>
+          <a href="lessons/infix-to-postfix.html">閱讀規則 ↗</a>
+        </div>
+        <div class="demo-body">
+          <ol class="tokens" aria-label="中序算式"><li>A</li><li>+</li><li>B</li><li>*</li><li>C</li></ol>
+          <div aria-live="polite" aria-atomic="true">
+            <dl>
+              <div><dt>堆疊（底 → 頂）</dt><dd data-stack>空</dd></div>
+              <div><dt>後序輸出</dt><dd data-output>空</dd></div>
+            </dl>
+            <p class="demo-message" data-message>按「下一步」，從左至右讀取算式。</p>
+          </div>
+          <div class="demo-actions">
+            <button type="button" data-previous disabled>上一步</button>
+            <button class="next" type="button" data-next>下一步</button>
+            <button type="button" data-reset>重來</button>
+            <span class="counter" data-counter>0 / 6</span>
+          </div>
+          <noscript><p>啟用 JavaScript 即可操作示範。完整步驟也列在中序轉後序的課程頁。</p></noscript>
+        </div>
+      </section>
+    </section>
+
+    <section class="catalogue" id="lessons" aria-labelledby="catalogue-title">
+      <h2 id="catalogue-title">課程目錄</h2>
+      <div class="cards">
+        <a class="card" href="lessons/stack.html">
+          <code>STACK</code><h3>堆疊</h3><p>用 push、pop、top 理解後進先出。</p><span class="more">進入課程 →</span>
+        </a>
+        <a class="card" href="lessons/queue.html">
+          <code>QUEUE</code><h3>佇列</h3><p>從排隊的例子理解先進先出。</p><span class="more">進入課程 →</span>
+        </a>
+        <a class="card" href="lessons/infix-to-postfix.html">
+          <code>INFIX → POSTFIX</code><h3>中序轉後序</h3><p>用堆疊處理括號和運算子的優先順序。</p><span class="more">進入課程 →</span>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap">資料結構筆記</div></footer>
+</body>
+</html>

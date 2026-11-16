@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="佇列（Queue）從尾端加入資料，再從前端取出資料。最先加入的元素會最先被取出，稱為先進先出（FIFO）。">
+  <title>佇列｜資料結構筆記</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header><div class="wrap">
+    <a class="brand" href="../index.html"><span class="mark" aria-hidden="true">DS</span> 資料結構筆記</a>
+    <nav aria-label="主導覽"><a href="../index.html#lessons">課程目錄</a></nav>
+  </div></header>
+
+  <main class="wrap"><article class="article">
+    <a class="back" href="../index.html#lessons">← 回課程目錄</a>
+    <h1>佇列</h1>
+    <p class="summary">佇列（Queue）從尾端加入資料，再從前端取出資料。最先加入的元素會最先被取出，稱為先進先出（FIFO）。</p>
+
+    <section>
+      <h2>操作規則</h2>
+      <ul>
+          <li><code>enqueue(x)</code> 將元素 x 加入隊尾。</li>
+          <li><code>dequeue()</code> 移除隊首元素。</li>
+          <li><code>front()</code> 查看隊首元素，佇列的內容維持原狀。</li>
+        </ul>
+        <p>C++ 的 <code>std::queue</code> 用 <code>push()</code> 和 <code>pop()</code> 表示加入隊尾和移除隊首。取用隊首前先檢查佇列是否為空。</p>
+    </section>
+
+    <section>
+      <h2>範例</h2>
+      <p>A 和 B 依序排隊。A 離開後，C 加入隊尾。</p>
+        <pre><code>enqueue(A)  [A]
+enqueue(B)  [A, B]
+dequeue()   [B]
+enqueue(C)  [B, C]
+front()     B</code></pre>
+    </section>
+
+    <section class="quiz">
+      <h2>小練習</h2>
+      <p>空佇列依序執行 enqueue(2)、enqueue(5)、dequeue()、enqueue(8)。此時 front() 會看到什麼？</p>
+      <details>
+        <summary>查看解答</summary>
+        <p>5。先加入的 2 已離開。5 比 8 更早加入，所以它位於隊首。</p>
+      </details>
+    </section>
+  </article></main>
+  <footer><div class="wrap">資料結構筆記</div></footer>
+</body>
+</html>

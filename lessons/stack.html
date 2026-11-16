@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="堆疊（Stack）從同一端放入和取出資料。最後放入的元素會最先取出，稱為後進先出（LIFO）。">
+  <title>堆疊｜資料結構筆記</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header><div class="wrap">
+    <a class="brand" href="../index.html"><span class="mark" aria-hidden="true">DS</span> 資料結構筆記</a>
+    <nav aria-label="主導覽"><a href="../index.html#lessons">課程目錄</a></nav>
+  </div></header>
+
+  <main class="wrap"><article class="article">
+    <a class="back" href="../index.html#lessons">← 回課程目錄</a>
+    <h1>堆疊</h1>
+    <p class="summary">堆疊（Stack）從同一端放入和取出資料。最後放入的元素會最先取出，稱為後進先出（LIFO）。</p>
+
+    <section>
+      <h2>操作規則</h2>
+      <ul>
+          <li><code>push(x)</code> 把元素 x 放到頂端。</li>
+          <li><code>pop()</code> 移除頂端元素。</li>
+          <li><code>top()</code> 查看頂端元素，堆疊的內容維持原狀。</li>
+        </ul>
+        <p>空堆疊沒有頂端元素。程式通常先用 <code>empty()</code> 判斷，再呼叫 <code>top()</code> 或 <code>pop()</code>。</p>
+    </section>
+
+    <section>
+      <h2>範例</h2>
+      <p>依序放入 4、7、9，然後移除一次頂端元素。</p>
+        <pre><code>push(4)  [4]
+push(7)  [4, 7]
+push(9)  [4, 7, 9]
+pop()    [4, 7]
+top()    7</code></pre>
+    </section>
+
+    <section class="quiz">
+      <h2>小練習</h2>
+      <p>空堆疊依序執行 push(2)、push(5)、pop()、push(8)。此時 top() 會看到什麼？</p>
+      <details>
+        <summary>查看解答</summary>
+        <p>8。pop() 移除 5，而 8 是之後放進去的元素。</p>
+      </details>
+    </section>
+  </article></main>
+  <footer><div class="wrap">資料結構筆記</div></footer>
+</body>
+</html>
